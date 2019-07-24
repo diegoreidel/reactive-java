@@ -1,0 +1,14 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://${PRICER_MONGO_USER}:${PRICER_MONGO_PASSWORD}@${PRICER_MONGO_SERVER}/test?retryWrites=true&w=majority
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+      enabled: true

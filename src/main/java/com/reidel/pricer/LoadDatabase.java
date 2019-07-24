@@ -8,13 +8,13 @@ import reactor.core.publisher.Flux;
 @Configuration
 public class LoadDatabase {
 
-    @Bean
-    CommandLineRunner init(ProductRepository repository) {
-        return args -> Flux.just(
-                new Product("Apple"),
-                new Product("Strawberry"),
-                new Product("Banana"))
-                .flatMap(repository::save)
-                .subscribe(System.out::println);
-    }
+//    @Bean
+//    CommandLineRunner init(ProductRepository repository) {
+//        return args -> Flux.just(
+//                new Product("Apple"),
+//                new Product("Strawberry"),
+//                new Product("Banana"))
+//                .flatMap(repository::save)
+//                .subscribe(System.out::println);
+//    }
 }
